@@ -1,53 +1,20 @@
 RoomWordsSample
 ================
 
-This repository contains the finished sample code for the
-[Architecture Components codelab](https://codelabs.developers.google.com/codelabs/android-room-with-a-view/index.html?index=..%2F..%2Findex#0) in Java on the master branch and in Kotlin for the [Architecture Components Kotlin codelab](https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin) on the [kotlin](https://github.com/googlecodelabs/android-room-with-a-view/tree/kotlin) branch.
+Hal Yang Baru Saya Pelahari:
+1. Live Data: Memproses data terbaru yang di input, edit, hapus
+2. View Model: Pusat komunikasi antara UI dan Data 
+3. Di DAO (objek akses data), Anda menentukan kueri SQL dan mengaitkannya dengan panggilan metode. 
+4. Compiler akan memeriksa SQL dan menghasilkan kueri dari anotasi praktis untuk kueri umum, seperti @Insert. Room menggunakan DAO untuk membuat API yang bersih untuk kode Anda
+5. onConflict = OnConflictStrategy.IGNORE: Strategi onConflict yang dipilih akan mengabaikan kata baru jika sama persis dengan kata yang sudah ada dalam daftar. Untuk mengetahui lebih lanjut strategi konflik yang tersedia
+6. Flow menghasilkan nilai satu per satu (bukan sekaligus) yang dapat menghasilkan nilai dari operasi asinkron seperti permintaan jaringan, panggilan database, atau kode asinkron lainnya
+7. Class repositori memisahkan akses ke beberapa sumber data. Repositori bukan bagian dari library Komponen Arsitektur, tetapi merupakan praktik terbaik yang disarankan untuk pemisahan kode dan arsitektur. Class Repositori menyediakan API yang bersih untuk akses data ke aplikasi lainnya.
+8. ViewModel menyimpan data UI aplikasi Anda dengan cara yang sesuai dengan siklus proses agar konfigurasi tidak berubah. Memisahkan data UI aplikasi dari clas
+9. Activity dan Fragment memungkinkan Anda mengikuti prinsip tanggung jawab tunggal dengan lebih baik
+10. Anda hanya ingin memiliki satu instance database dan repositori di aplikasi Anda. Cara mudah untuk mencapainya adalah dengan membuatnya sebagai anggota class 
+11. Application. Instance ini kemudian hanya akan diambil dari Application kapan pun diperlukan, bukan dikonstruksi setiap saat.
+12. Setiap kali data berubah, callback onChanged() akan dipanggil, yang memanggil metode setWords() adaptor untuk memperbarui data cache adaptor dan memuat ulang daftar yang ditampilkan.
 
-Introduction
-------------
-
-In May 2017 Google released the Architecture Components libraries.
-Each library manages and simplifies aspects of data persistence and the
-UI component lifecycle. Together, the libraries encourage a modular
-app architecture that results in reduced complexity and less code.
-
-This sample shows how to use the libraries to build
-a complete basic app that implements the recommended architecture
-and can be used as a template for further explorations.
-
-
-Pre-requisites
---------------
-
-* Android Studio 3.0 or later and you know how to use it.
-
-* Make sure Android Studio is updated, as well as your SDK and Gradle.
-Otherwise, you may have to wait for a while until all the updates are done.
-
-* A device or emulator that runs SDK level 20
-
-You need to be solidly familiar with the Java programming language,
-object-oriented design concepts, and Android Development Fundamentals.
-In particular:
-
-* RecyclerView and Adapters
-* SQLite database and the SQLite query language
-* Threading and ExecutorService
-* It helps to be familiar with software architectural patterns that separate
-  data from the user interface, such as MVP or MVC. This codelab implements the
-  architecture defined in the
-  [Guide to App Architecture](
-  https://developer.android.com/topic/libraries/architecture/guide.html)
-
-Getting Started
----------------
-
-1. [Install Android Studio](https://developer.android.com/studio/install.html),
-if you don't already have it.
-2. Download the sample.
-2. Import the sample into Android Studio.
-3. Build and run the sample.
 
 License
 -------
